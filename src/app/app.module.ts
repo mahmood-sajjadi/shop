@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { mainReducer } from "./state-management/reducers/main-reducer";
-import { StoreModule } from "@ngrx/store";
+import { mainReducer } from './state-management/reducers/main-reducer';
+import { StoreModule } from '@ngrx/store';
 import { ProductSmallComponent } from './product-small/product-small.component';
 import { ProductComponent } from './product/product.component';
 import { CategoryComponent } from './category/category.component';
@@ -27,7 +27,7 @@ import { CheckoutComponent } from './checkout/checkout.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    StoreModule.provideStore({mainReducer})
+    StoreModule.forRoot({mainReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
